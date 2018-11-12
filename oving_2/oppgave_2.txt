@@ -1,0 +1,8 @@
+Oppgave 2 - teorioppgave
+Hva vil skje hvis du skriver:
+
+char *line = nullptr;   // eller char *line = 0;
+strcpy(line, "Dette er en tekst");
+
+
+Man vil få feil under kjøring av programmet. Siden variabelen line er initialisert som null-peker kan man ikke endre verdien den peker til. Når strcpy prøver å skrive til minneområdet line peker til får man derfor feil.

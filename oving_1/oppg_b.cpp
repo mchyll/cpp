@@ -7,20 +7,15 @@ using namespace std;
 void read_temperatures(double temperatures[], int length);
 
 int main() {
-
     const int length = 5;
+    double temperatures[length];
+    read_temperatures(temperatures, length);
 
     int low = 0;  // Number of temperatures below 10
     int mid = 0;  // Num temp between 10 and 20
     int high = 0; // Num temp over 20
 
-    cout << "Du skal skrive inn " << length << " temperaturer." << endl;
-    for (int i = 0; i < length; i++) {
-        cout << "Temperatur nr " << (i + 1) << ": ";
-
-        double temp;
-        cin >> temp;
-
+    for (auto temp : temperatures) {
         if (temp < 10) {
             low++;
         } else if (temp <= 20) {
